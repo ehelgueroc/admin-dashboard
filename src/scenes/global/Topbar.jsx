@@ -8,11 +8,12 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PersonModeOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 
-import { ColorModeContext, tokens } from '../../theme';
+import { ColorModeContext } from '../../theme';
+import { getColorTokens } from '../../utils/getColorTokens';
 
 function TopBar() {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const colors = getColorTokens(theme.palette.mode);
   const { toggleColorMode } = useContext(ColorModeContext);
 
   return (
