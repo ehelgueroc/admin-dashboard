@@ -43,33 +43,33 @@ export const themeSettings = (mode) => {
     palette: {
       mode,
       ...(mode === 'dark' ? darkModeColors : lightModeColors),
-      typography: {
+    },
+    typography: {
+      fontFamily,
+      fontSize: 12,
+      h1: {
         fontFamily,
-        fontSize: 12,
-        h1: {
-          fontFamily,
-          fontSize: 40,
-        },
-        h2: {
-          fontFamily,
-          fontSize: 32,
-        },
-        h3: {
-          fontFamily,
-          fontSize: 24,
-        },
-        h4: {
-          fontFamily,
-          fontSize: 20,
-        },
-        h5: {
-          fontFamily,
-          fontSize: 16,
-        },
-        h6: {
-          fontFamily,
-          fontSize: 14,
-        },
+        fontSize: 40,
+      },
+      h2: {
+        fontFamily,
+        fontSize: 32,
+      },
+      h3: {
+        fontFamily,
+        fontSize: 24,
+      },
+      h4: {
+        fontFamily,
+        fontSize: 20,
+      },
+      h5: {
+        fontFamily,
+        fontSize: 14,
+      },
+      h6: {
+        fontFamily,
+        fontSize: 14,
       },
     },
   };
