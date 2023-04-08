@@ -5,6 +5,7 @@ body,
 #root,
 .app,
 .content {
+  width: 100%;
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 
