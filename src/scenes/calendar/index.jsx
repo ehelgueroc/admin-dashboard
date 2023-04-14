@@ -87,7 +87,7 @@ function Calendar() {
             select={handleDateClick}
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
-            initialEvents={[{ id: '9123', title: 'Start AXE project', date: '2022-09-14' }]}
+            initialEvents={[{ id: '9123', title: 'Start AXE project', date: '2023-03-14' }]}
           />
         </Box>
       </Box>
