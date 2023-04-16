@@ -14,7 +14,6 @@ import ProgressCircle from '../../components/ProgressCircle';
 import Header from '../../components/Header';
 import { getColorTokens } from '../../utils/getColorTokens';
 import { mockTransactions } from '../../data/mockData';
-// import { mockTransactions } from '../../data/mockData';
 
 function Dashboard() {
   const theme = useTheme();
