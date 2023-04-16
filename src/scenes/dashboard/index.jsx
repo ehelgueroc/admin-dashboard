@@ -140,7 +140,9 @@ function Dashboard() {
             borderBottom={`4px solid ${colors.primary[500]}`}
             colors={colors.grey[100]}
           >
-            <Typography> Recent Transactions </Typography>
+            <Typography color={colors.grey[100]} variant='h5' fontWeight='600'>
+              Recent Transactions
+            </Typography>
           </Box>
           {mockTransactions.map((transaction, i) => (
             <Box
@@ -158,10 +160,10 @@ function Dashboard() {
                 <Typography variant='h5' fontWeight='600' color={colors.grey[100]}>
                   {transaction.user}
                 </Typography>
-                <Box color={colors.grey[100]}>{transaction.date}</Box>
-                <Box backgroundColor={colors.greenAccent[500]} p='5px 10px' borderRadius='4px'>
-                  {transaction.cost}€
-                </Box>
+              </Box>
+              <Box color={colors.grey[100]}>{transaction.date}</Box>
+              <Box backgroundColor={colors.greenAccent[500]} p='5px 10px' borderRadius='4px'>
+                {transaction.cost}€
               </Box>
             </Box>
           ))}
