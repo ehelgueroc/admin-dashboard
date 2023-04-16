@@ -1,10 +1,9 @@
-import { Box, IconButton, Typography, useTheme } from '@mui/material';
-// Button, IconButton, Typography,
+import { Box, IconButton, Typography, Button, useTheme } from '@mui/material';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import EmailIcon from '@mui/icons-material/Email';
-// import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
-// import PersonAddIcon from '@mui/icons-material/PersonAdd';
-// import TrafficIcon from '@mui/icons-material/Traffic';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import TrafficIcon from '@mui/icons-material/Traffic';
 
 import LineChart from '../../components/LineChart';
 import BarChart from '../../components/BarChart';
@@ -24,26 +23,23 @@ function Dashboard() {
     <Box m='20px'>
       <Box display='flex' justifyContent='space-between' alignItems='center'>
         <Header title='DASHBOARD' subtitle='This is the main dashboard' />
+        <Box>
+          <Button
+            sx={{
+              backgroundColor: colors.blueAccent[700],
+              color: colors.grey[100],
+              fontSize: '14px',
+              fontWeight: 'bold',
+              padding: '10px 20px',
+            }}
+          >
+            <DownloadOutlinedIcon sx={{ mr: '10px' }} />
+            DOWNLOAD REPORTS
+          </Button>
+        </Box>
       </Box>
-      <Box
-        sx={{
-          backgroundColor: colors.blueAccent[700],
-          color: colors.grey[700],
-          fontSize: '14px',
-          fontWeight: 'bold',
-          padding: '10px 20px',
-        }}
-      >
-        <DownloadOutlinedIcon sx={{ mr: '10px' }} />
-        Download Reports
-      </Box>
-      <Box
-        height='75vh'
-        display='grid'
-        gridTemplateColumns='repeat(12, 1fr)'
-        gridAutoRows='140px'
-        gap='20px'
-      >
+
+      <Box display='grid' gridTemplateColumns='repeat(12, 1fr)' gridAutoRows='140px' gap='20px'>
         <Box
           gridColumn='span 3'
           backgroundColor={colors.primary[400]}
@@ -71,7 +67,7 @@ function Dashboard() {
             subtitle='Emails Sent'
             progress='0.75'
             increase='+14%'
-            icon={<EmailIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
+            icon={<PointOfSaleIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
           />
         </Box>
         <Box
@@ -86,7 +82,7 @@ function Dashboard() {
             subtitle='Emails Sent'
             progress='0.75'
             increase='+14%'
-            icon={<EmailIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
+            icon={<PersonAddIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
           />
         </Box>
         <Box
@@ -101,7 +97,7 @@ function Dashboard() {
             subtitle='Emails Sent'
             progress='0.75'
             increase='+14%'
-            icon={<EmailIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
+            icon={<TrafficIcon sx={{ color: colors.greenAccent[600], fontSize: '26px' }} />}
           />
         </Box>
         <Box gridColumn='span 8' gridRow='span 2' backgroundColor={colors.primary[400]}>

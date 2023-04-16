@@ -18,17 +18,17 @@ function StatBox({ title, subtitle, icon, progress, increase }) {
         <Box>
           <ProgressCircle progress={progress} />
         </Box>
-        <Box display='flex' justifyContent='space-between'>
-          <Typography variant='h4' fontWeight='bold' sx={{ color: colors.greenAccent[100] }}>
+        <Box display='flex' justifyContent='space-between' mt='2px'>
+          <Typography variant='h5' sx={{ color: colors.greenAccent[100] }}>
             {subtitle}
           </Typography>
           <Typography
             variant='h5'
             fontStyle='italic'
             fontWeight='bold'
-            sx={{ color: colors.greenAccent[100] }}
+            sx={{ color: colors.greenAccent[600] }}
           >
-            {increase} %
+            {increase}
           </Typography>
         </Box>
       </Box>

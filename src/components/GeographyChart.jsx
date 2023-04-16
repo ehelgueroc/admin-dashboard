@@ -48,7 +48,7 @@ function GeographyChart({ isDashboard = false }) {
       projectionScale={isDashboard ? 40 : 150}
       projectionTranslation={isDashboard ? [0.49, 0.6] : [0.5, 0.5]}
       projectionRotation={[0, 0, 0]}
-      enableGraticule
+      enableGraticule={false}
       graticuleLineColor='#dddddd'
       borderWidth={1.5}
       borderColor='transparent'
